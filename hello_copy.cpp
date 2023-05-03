@@ -12,7 +12,7 @@ int main()
     cout<<x;
     cout<<x;
 
-    using namespace std;
+    
 
 
 }
