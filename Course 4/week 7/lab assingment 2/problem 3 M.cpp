@@ -26,16 +26,18 @@ int main() {
     cin >> n;
 
     vector<int> a(n);
+    int maxVal = 0;
     for (int i = 0; i < n; i++) {
         cin >> a[i];
+        maxVal = max(maxVal, a[i]);
     }
 
-    vector<long long> count(100001, 0);
+    vector<long long> count(maxVal + 1, 0);
     for (int i = 0; i < n; i++) {
         count[a[i]]++;
     }
 
-    long long result = maxPoints(count, 100000);
+    long long result = maxPoints(count, maxVal);
     cout << result << endl;
 
     return 0;
