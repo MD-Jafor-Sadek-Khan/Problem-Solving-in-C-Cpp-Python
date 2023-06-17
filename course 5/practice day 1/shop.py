@@ -1,5 +1,11 @@
 class Store:
-    all_products={}
+    
+    def __init__(self,name) -> None:
+        self.name=name
+        self.all_products={}
+    
+    
+        
 
 class User:
     seller_id=1000
@@ -38,26 +44,40 @@ class Seller(User):
         super().__init__(email, password)
         
 
-    def add_product(self,name,price,quantity):
+    def add_products(self,name,price,quantity):
         product=Product(name,price,quantity)
-        Store.all_products[self.id]=[product]
+        print(f'your id is={self.id}')
+        print(f'product name {product.name} product price {product.price}  product quantity {product.quantity}')
+        product.add_to_store(product,self.id)
+        
     
     def __repr__(self) -> str:
-        return f'id= {self.id}'
+        return f'your email= {self.email} || your id= {self.id}'
         
         
-class Product:
+class Product(Store):
     def __init__(self, product_name, product_price, product_quantity) -> None:
         self.name = product_name
         self.price=product_price
         self.quantity=product_quantity
+    def add_to_store(self,product,id):
+        self.all_products[id]=[product]
         
         
         
-user=Seller("kala@kala.com",1234)
-user3=Seller("kala@kala.com",1234)
-user2=Seller("kala@kala.com",1234)
+kala=Store("kala")        
+user=Seller("kala@kala.com",12345)
+user3=Seller("dhola@gmail.com",12346)
+user2=Seller("futabhai@futa.com",12348)
 
 print(user)
 print(user2)
 print(user3)
+
+user.add_products('malta',200,12)
+
+
+
+
+
+print(kala.get_all_product())
