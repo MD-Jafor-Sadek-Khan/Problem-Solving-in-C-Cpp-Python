@@ -268,3 +268,5 @@ dbbluser1.getBalance
 dbbluser1.getLoan(1)
 brackUser1.getBalance
 brackUser1.getLoan(10)
+
+dbblAdmin1.getBanksTotalBalance
