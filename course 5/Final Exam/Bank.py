@@ -29,12 +29,13 @@ Note
 """
 
 
-#import section
+# import section
 
 import datetime
 
 
-#common classes
+# common classes
+
 
 class Bank:
     totalBalance = 0
@@ -56,7 +57,8 @@ class Bank:
         self.loanFeatureToggle = value
 
 
-#Child classes
+# Child classes
+
 
 class User(Bank):
     def __init__(self, name, email, password, bank) -> None:
@@ -103,13 +105,15 @@ class User(Bank):
                         f"Heres your loan of {amount}tk. Happy Banking!! Better pay up in time..or else!!"
                     )
             else:
-                print(f"Sorry! currently You can get a loan of upto {self.bank.totalBalance} due to the bank having insufficient funds")
+                print(
+                    f"Sorry! currently You can get a loan of upto {self.bank.totalBalance} due to the bank having insufficient funds"
+                )
         else:
             print(f"Currently {self.bank.name} Bank isnt issuing any loans.Thank you")
 
     @property
     def transactionHistory(self):
-        print(f'\n\n Your Transaction History in {self.bank.name} Bank \n\n')
+        print(f"\n\n Your Transaction History in {self.bank.name} Bank \n\n")
         for i in self.transactionHistoryList:
             print(i)
         print(f"\n\n**************************************************\n\n")
@@ -157,13 +161,12 @@ class Admin(Bank):
         self.bank = bank
         super().__init__(name)
 
-    
-    def LoanFeatureToggle(self,value):
+    def LoanFeatureToggle(self, value):
         self.bank.toggleLoanFeature(value)
+
     # def Turn_On_Or_Off_Loan_Feature(self,value):
     #     self.bank.loanAllowenceToggle(value)
-        
-    
+
     @property
     def getBanksTotalBalance(self):
         total = self.bank.totalBalance
@@ -178,9 +181,7 @@ class Admin(Bank):
         print(f"{self.bank.name} Banks total Loan Amount is {total}")
 
 
-
-
-#testing Phase
+# testing Phase
 
 dbbl = Bank("dbbl")
 dbbluser1 = User("kala", "kala@bazar.com", 12345, dbbl)
