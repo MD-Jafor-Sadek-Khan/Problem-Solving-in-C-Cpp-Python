@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- DaisyUi  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FavIcon  -->
+    <script src="https://kit.fontawesome.com/a668cf3075.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body class="container mx-auto">
+    <p class="hidden" id="category-info"></p>
+    <header>
+        <nav class="my-5">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <a class="btn btn-ghost normal-case text-3xl font-bold" href="./index.html"><img src="assets/Logo.png" alt=""></a>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-red-500 text-white" href="./index.html">&#9664;Back to Home</a>
+                </div>
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <section>
+            <p class="mx-auto text-start text-7xl font-extrabold my-7">Q&A</p>
+            <div>
+                <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" checked="checked" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        <strong>Discuss the scope of var, let, and const</strong>
+                    </div>
+                    <div class="collapse-content"> 
+                      <p><strong>var:</strong> Imagine var as a bit forgetful. When you declare a variable with var, it might forget where it was defined. It has what's called "function scope", meaning it's accessible throughout the whole function in which it was created. <br>
+
+                        <strong>let:</strong> Now, let is a bit more cautious. It only remembers where it was defined inside the block it belongs to. This is what we call "block scope". So, it's like it has a more limited memory compared to var. <br>
+                        
+                        <strong>const:</strong> Const is like a rock-solid memory. Once you define something with const, it stays that way. You can't reassign it to something else. It's also block scoped, just like let.</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        <strong>Tell us the use cases of null and undefined</strong>
+                    </div>
+                    <div class="collapse-content"> 
+                      <p><strong>null:</strong> Think of null as an intentional empty space. It's like saying, "I know there's a spot for something here, but right now, it's empty on purpose." For example, if you have a slot for a username, but the user hasn't provided it yet, you might set it to null. <br>
+
+                        <strong>undefined:</strong> Undefined is like a blank space that you didn't even mean to leave empty. It means no value has been assigned to a variable yet. So, if you declare a variable but forget to give it a value, it'll be undefined.</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        <strong>What do you mean by REST API?</strong>
+                    </div>
+                    <div class="collapse-content"> 
+                      <p>Alright, imagine a restaurant. You, as a customer, don't need to know all the intricate details of how the kitchen works. You just need to know how to place your order and get your food. That's what a REST API is like.
+                        <br>
+                        It stands for Representational State Transfer Application Programming Interface. In simple terms, it's a way for different software applications to communicate with each other over the internet. It's like a menu in a restaurant. You request something (like a dish), and the kitchen (server) prepares it and serves it to you.
+                        <br>
+                        For example, when you use a weather app on your phone, it sends a request to a server somewhere on the internet, asking for the current weather. The server processes this request and sends back the weather information, which your app then displays to you.
+                        <br>
+                        So, a REST API defines a set of rules for how these requests and responses should be structured and what kind of information can be exchanged. It's like a common language that different software can use to talk to each other.
+                        
+                        
+                        
+                        
+                        </p>
+                    </div>
+                  </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/PHero-Tube.js"></script>
+</body>
+
+</html>

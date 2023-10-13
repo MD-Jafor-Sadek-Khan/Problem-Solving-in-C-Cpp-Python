@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- DaisyUi  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FavIcon  -->
+    <script src="https://kit.fontawesome.com/a668cf3075.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body class="container mx-auto">
+    <p class="hidden" id="category-info"></p>
+    <header>
+        <nav class="my-5">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <a class="btn btn-ghost normal-case text-3xl font-bold" href="./index.html"><img src="assets/Logo.png" alt=""></a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <button onclick="sortByView()" class="btn">Sort By View</button>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-red-500 text-white" href="./blog.html">Blog</a>
+                </div>
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <section class="flex justify-center align-middle gap-2 mt-10">
+            <button onclick="loadCategories('All')" class="btn btn-sm">All</button>
+            <button onclick="loadCategories('Music')" class="btn btn-sm">Music</button>
+            <button onclick="loadCategories('Comedy')" class="btn btn-sm">Comedy</button>
+            <button onclick="loadCategories('Drawing')" class="btn btn-sm">Drawing</button>
+        </section>
+
+        <section>
+            <div id="video-card-container" class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+            </div>
+        </section>
+        <section>
+            <div id="no-data">
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <style>
+            .video
+            {
+                overflow: hidden;
+                width: ;
+            }
+        </style>
+
+    </footer>
+
+
+
+
+
+
+
+    <script src="js/PHero-Tube.js"></script>
+</body>
+
+</html>
