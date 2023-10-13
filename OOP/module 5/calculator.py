@@ -1,0 +1,4 @@
+class Calculator:
+    brand = 'Casio MS990'
+    def add(self, num1, num2):
+        pass
